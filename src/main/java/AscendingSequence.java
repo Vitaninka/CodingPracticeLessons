@@ -12,6 +12,7 @@ public class AscendingSequence {
     }
 
     public String buildAscendingString() {
+
         StringBuilder result = new StringBuilder();
         for (int i = 1; i < 5; i++) {
             result.append(i).append(", ");
@@ -20,4 +21,13 @@ public class AscendingSequence {
         System.out.println(result);
         return String.valueOf(result);
     }
+
+    public void printAscendingSequence(int startNumber, int endNumber){
+
+        for(int i = startNumber; i < endNumber; i ++){
+            System.out.print(i + ", ");
+        }
+        System.out.print(endNumber);
+    }
+
 }

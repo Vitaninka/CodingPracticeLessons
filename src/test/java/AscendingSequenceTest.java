@@ -16,21 +16,22 @@ public class AscendingSequenceTest {
         Assert.assertArrayEquals(expectedResult, actualResult);
 
     }
-        @Test
-        public void testAscendingArrayZeroCase() {
+
+    @Test
+    public void testAscendingArrayZeroCase() {
 
         int startNumber = 0;
         int endNumber = 5;
-        int[] expectedResult = {0,1, 2, 3, 4, 5};
+        int[] expectedResult = {0, 1, 2, 3, 4, 5};
 
         AscendingSequence ascendingSequence = new AscendingSequence();
         int[] actualResult = ascendingSequence.buildAscendingArray(startNumber, endNumber);
 
         Assert.assertArrayEquals(expectedResult, actualResult);
-        }
+    }
 
-        @Test
-        public void testAscendingArrayNegativeNumber(){
+    @Test
+    public void testAscendingArrayNegativeNumber() {
 
         int startNumber = -8;
         int endNumber = -4;
@@ -40,11 +41,10 @@ public class AscendingSequenceTest {
         int[] actualResult = ascendingSequence.buildAscendingArray(startNumber, endNumber);
 
         Assert.assertArrayEquals(expectedResult, actualResult);
+    }
 
-        }
-
-        @Test
-        public void testAscendingArrayNegativePositiveNumber(){
+    @Test
+    public void testAscendingArrayNegativePositiveNumber() {
 
         int startNumber = -2;
         int endNumber = 3;
@@ -54,15 +54,23 @@ public class AscendingSequenceTest {
         int[] actualResult = ascendingSequence.buildAscendingArray(startNumber, endNumber);
 
         Assert.assertArrayEquals(expectedResult, actualResult);
-        }
+    }
 
-        @Test
-        public void testAscendingSequenceStringHappyPath(){
+    @Test
+    public void testAscendingSequenceStringHappyPath() {
         String expectedResult = "1, 2, 3, 4, 5";
 
         AscendingSequence ascendingSequence = new AscendingSequence();
         String actualResult = ascendingSequence.buildAscendingString();
 
         Assert.assertEquals(expectedResult, actualResult);
-        }
+    }
+
+    @Test
+    public void testPrintAscendingSequence() {
+
+        AscendingSequence ascendingSequence = new AscendingSequence();
+        ascendingSequence.printAscendingSequence(1, 1000);
+
+    }
 }
